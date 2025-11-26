@@ -1,6 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-export default function Landingpage() {
+import { Link } from "react-router-dom";
+
+function Child() {
   return (
     <>
       <nav>
@@ -9,6 +10,12 @@ export default function Landingpage() {
         <Link to="/Women">Women</Link>
         <Link to="/Child">Child</Link>
       </nav>
+      
+      <div>
+        <h1>children page </h1>
+      </div>
     </>
   );
 }
+
+export default Child

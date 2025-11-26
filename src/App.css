@@ -40,7 +40,7 @@
 .read-the-docs {
   color: #888;
 } */
- 
+
 /* Hero Section */
 
 
@@ -86,4 +86,30 @@
   margin-top: 10px;
   max-width: 600px;
   opacity: 0.9;
+}
+.gucci-navbar {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gucci-navbar a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.gucci-navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+
+.gucci-navbar a:hover::after {
+  width: 100%;
 }

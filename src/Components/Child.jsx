@@ -7,7 +7,7 @@ import "./Child.css";
 // ICONS (FontAwesome 6)
 import { FaMagnifyingGlass, FaUser, FaBagShopping } from "react-icons/fa6";
 
-function Men() {
+function Child() {
   return (
     <>
       {/* 
@@ -206,7 +206,7 @@ function Men() {
 
           <div className="product-card-child">
             <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQ3Y3JjGaAgz5lgJWDtXJyesUB3ZxbTivGH5DsC6O8cce8J96Z" alt="Gucci Half Horsebit crossbody bag" />
-            <p className="product-title-child"></p>Gucci Half Horsebit crossbody bag
+            <p className="product-title-child">Gucci Half Horsebit crossbody bag</p>
             <p className="product-price-child">$3,500</p>
           </div>
 
@@ -219,4 +219,4 @@ function Men() {
   );
 }
 
-export default Men;
+export default Child;

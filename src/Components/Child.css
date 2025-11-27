@@ -1,0 +1,156 @@
+.hero-container-child {
+  width: 100%;
+  height: 90vh;
+  background-image: url("https://images.ctfassets.net/brzb6u29244a/4dLSEh4sgMjYhbZntYCfIZ/22e45d8b6826106d33fc66c51c764fbe/HeroCategory-Desktop_Gucci-KIDS-NOV25-KIDS-01-240_001_Default.png?w=4000&fm=avif&q=50");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.hero-text-child {
+  color: white;
+}
+
+.main-title-child {
+  font-size: 28px;
+  margin: 0;
+}
+
+.subtitle-child {
+  font-size: 12px;
+  margin-top: 10px;
+  max-width: 600px;
+  opacity: 0.9;
+}
+.gucci-navbar {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gucci-navbar a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.gucci-navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+
+.gucci-navbar a:hover::after {
+  width: 100%;
+}
+
+
+/* MAIN SECTION */
+.catagory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+/* BOXES */
+.boy-catagory,
+.girl-catagory {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* BUTTON BASE */
+.boy-btn,
+.girl-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s ease;
+}
+
+/* BOY CATEGORY STYLE */
+.boy-btn {
+  background-image: url("https://images.ctfassets.net/brzb6u29244a/3AFnYOiYCCEI8f82GtLk54/d97a42d6ecedf8a64b496c9f570802df/HeroCategory-Desktop_Gucci-KIDS-NOV25-KIDS-03-802_001_Default.png?w=4000&fm=avif&q=50");
+  color: white;
+  font-size: 30px;
+}
+
+/* GIRL CATEGORY STYLE */
+.girl-btn {
+  background-image: url("https://images.ctfassets.net/brzb6u29244a/3vhVfJsSxyHjoQnGnFpTqZ/065f82bbb6e29079a0c3e25a6ccdb74a/HeroCategory-Desktop_Gucci-KIDS-NOV25-KIDS-02-483_001_Default.png?w=4000&fm=avif&q=50");
+  color: white;
+  font-size: 30px;
+}
+
+/* HOVER EFFECT */
+.boy-btn:hover,
+.girl-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+
+.product-section-child {
+  padding: 40px 60px;
+}
+
+.product-controls-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.product-grid-child {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product-card-child img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.product-card-child{
+  transition: 0.3s ease;
+}
+
+.product-card-child:hover{
+transform: scale(1.08);
+}
+
+.product-title-child {
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.product-price-child {
+  font-size: 10px;
+  color: #444;
+}

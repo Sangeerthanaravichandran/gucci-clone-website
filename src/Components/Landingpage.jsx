@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Guccihome.css";
 
-// ICONS
-import { FaSearch, FaUser, FaShoppingBag } from "react-icons/fa6";
+// ICONS (FontAwesome 6)
+import { FaMagnifyingGlass, FaUser, FaBagShopping } from "react-icons/fa6";
 
 export default function Landingpage() {
   return (
     <>
-      {/* NAVBAR */}
+      {/* ===========================
+              NAVBAR
+      ============================ */}
       <nav className="gucci-navbar">
         {/* LEFT */}
         <div className="nav-left">
@@ -31,15 +33,15 @@ export default function Landingpage() {
           <Link to="/Women">Women</Link>
           <Link to="/Child">Children</Link>
 
-          {/* SEARCH BAR WITH ICON */}
+          {/* SEARCH */}
           <div className="search-box">
-            <FaSearch className="search-icon" />
+            <FaMagnifyingGlass className="search-icon" />
             <input type="text" className="search-input" placeholder="Search" />
           </div>
 
           {/* CART */}
           <Link to="/cart" className="nav-icon-link">
-            <FaShoppingBag />
+            <FaBagShopping />
           </Link>
 
           {/* LOGIN */}
@@ -49,11 +51,12 @@ export default function Landingpage() {
         </div>
       </nav>
 
-      {/* HERO SECTION */}
+      {/* ===========================
+             HERO SECTION
+      ============================ */}
       <section className="gucci-hero">
         <div className="hero-content">
           <p>Gucci Gift</p>
-          <br /> <br />
           <div className="buttons">
             <button className="btn">FOR HER</button>
             <button className="btn">FOR HIM</button>
@@ -61,9 +64,9 @@ export default function Landingpage() {
         </div>
       </section>
 
-      {/* ================================
-           GIFTS CURATED BY THE HOUSE
-      ================================= */}
+      {/* ===========================
+         GIFTS CURATED BY THE HOUSE
+      ============================ */}
       <section className="gifts-container">
         <h2 className="gifts-title">GIFTS CURATED BY THE HOUSE</h2>
 
@@ -110,10 +113,12 @@ export default function Landingpage() {
         </div>
       </section>
 
+      {/* ===========================
+               MEN’S BAGS HERO
+      ============================ */}
       <section className="gucci-hero-men">
         <div className="hero-men-content">
           <p>Men's Bags</p>
-          <br /> <br />
           <div className="buttons-bag">
             <button className="btn1">SHOP NOW</button>
           </div>

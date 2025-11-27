@@ -6,7 +6,8 @@ import "./Guccihome.css";
 function Men() {
   return (
     <>
-      {/* NAVBAR */}
+      {/* 
+              NAVBAR */}
       <nav className="gucci-navbar">
         {/* LEFT */}
         <div className="nav-left">
@@ -18,7 +19,9 @@ function Men() {
 
         {/* CENTER */}
         <div className="nav-center">
-          <h1 className="brand-title">GUCCI</h1>
+          <Link to="/" className="brand-title">
+            GUCCI
+          </Link>
         </div>
 
         {/* RIGHT */}
@@ -26,9 +29,22 @@ function Men() {
           <Link to="/Men">Men</Link>
           <Link to="/Women">Women</Link>
           <Link to="/Child">Children</Link>
-          <span className="nav-icon">🔍</span>
-          <span className="nav-icon">🛒</span>
-          <span className="nav-icon">👤</span>
+
+          {/* SEARCH */}
+          <div className="search-box">
+            <FaMagnifyingGlass className="search-icon" />
+            <input type="text" className="search-input" placeholder="Search" />
+          </div>
+
+          {/* CART */}
+          <Link to="/cart" className="nav-icon-link">
+            <FaBagShopping />
+          </Link>
+
+          {/* LOGIN */}
+          <Link to="/login" className="nav-icon-link">
+            <FaUser />
+          </Link>
         </div>
       </nav>
 

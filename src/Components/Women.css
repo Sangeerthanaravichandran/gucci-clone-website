@@ -1,0 +1,101 @@
+.hero-container-women {
+  width: 100%;
+  height: 90vh;
+  background-image: url("https://images.ctfassets.net/brzb6u29244a/2qOnyq1pnrt3iiEMNJiCrh/df523aa81923b95ef36aa8feb97d49c7/HeroCategory-Desktop_Gucci-CRUISE-OCT25-05-GUCCI-0579-B_001_Default.png?w=4000&fm=avif&q=50");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay-women {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.hero-text-women {
+  color: white;
+}
+
+.main-title-women {
+  font-size: 28px;
+  margin: 0;
+}
+
+.subtitle-women {
+  font-size: 12px;
+  margin-top: 10px;
+  max-width: 600px;
+  opacity: 0.9;
+}
+.gucci-navbar {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gucci-navbar a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.gucci-navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+
+.gucci-navbar a:hover::after {
+  width: 100%;
+}
+
+.product-section-women {
+  padding: 40px 60px;
+}
+
+.product-controls-women {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.product-grid-women {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product-card-women img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.product-card-women{
+  transition: 0.3s ease;
+}
+
+.product-card-women:hover{
+transform: scale(1.08);
+}
+
+.product-price-women {
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.product-price-women {
+  font-size: 10px;
+  color: #444;
+}

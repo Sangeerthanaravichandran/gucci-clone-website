@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Guccihome.css";
 
 // ICONS
-import { FaSearch, FaUser, FaShoppingBag } from "react-icons/fa";
+import { FaSearch, FaUser, FaShoppingBag } from "react-icons/fa6";
 
 export default function Landingpage() {
   return (

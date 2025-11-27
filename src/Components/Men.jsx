@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import "./Guccihome.css";
 
+// ICONS (FontAwesome 6)
+import { FaMagnifyingGlass, FaUser, FaBagShopping } from "react-icons/fa6";
+
 function Men() {
   return (
     <>

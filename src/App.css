@@ -113,3 +113,45 @@
 .gucci-navbar a:hover::after {
   width: 100%;
 }
+
+
+
+.product-section {
+  padding: 40px 60px;
+}
+
+.product-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.product-card{
+  transition: 0.3s ease;
+}
+
+.product-card:hover{
+transform: scale(1.08);
+}
+
+.product-title {
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.product-price {
+  font-size: 10px;
+  color: #444;
+}

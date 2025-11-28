@@ -42,7 +42,7 @@ export default function Landingpage() {
         {/* LEFT */}
         <div className="nav-left">
           <span className="plus-icon">+</span>
-          <Link to="/contact" className="contact-link">
+          <Link to="/Contact" className="contact-link">
             Contact Us
           </Link>
         </div>
@@ -80,7 +80,7 @@ export default function Landingpage() {
           <Link to="/Login" className="nav-icon-link">
             <FaUser />
           </Link>
-          
+
         </div>
       </nav>
 

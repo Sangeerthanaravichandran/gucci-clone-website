@@ -1,47 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Contact.css";
 
-export default function ContactDropdown() {
-  const [open, setOpen] = useState(false);
+// ICONS (FontAwesome 6)
+import { FaPhone, FaComments, FaEnvelope } from "react-icons/fa6";
+
+
+export default function Contact({ open, setOpen }) {
+  if (!open) return null;
 
   return (
-    <>
-      {/* HEADER BAR */}
-      <div className="contact-bar" onClick={() => setOpen(true)}>
-        <span className="contact-icon">+</span>
-        <span className="contact-title">Contact Us</span>
+    <div className="contact-overlay">
+      <div className="contact-panel">
+        <button className="close-btn" onClick={() => setOpen(false)}>
+          ✕
+        </button>
+
+        <h2>CONTACT US</h2>
+
+        <div className="item">
+          <h4> <FaPhone /> Call Us +1 (877) 482-2430</h4>
+          <p>Mon - Sat: 10 AM to 10 PM (EST)</p>
+          <p>Sunday: 10 AM to 9 PM (EST)</p>
+        </div>
+
+        <div className="item">
+          <h4> <FaComments /> LIVE CHAT</h4>
+          <p>Mon - Sat: 10 AM to 10 PM (EST)</p>
+          <p>Sunday: 10 AM to 9 PM (EST)</p>
+        </div>
+
+        <div className="item">
+          <h4> <FaEnvelope /> Message Us</h4>
+          <p>Mon - Sat: 10 AM to 10 PM (EST)</p>
+          <p>Sunday: 10 AM to 9 PM (EST)</p>
+        </div>
+
+        <h3>Do you need further assistance?</h3>
+        <a className="contact-link" href="#">
+          Get in Contact with Us
+        </a>
       </div>
-
-      {/* BACKDROP (BLUR BACKGROUND) */}
-      {open && <div className="backdrop" onClick={() => setOpen(false)}></div>}
-
-      {/* RIGHT SIDE PANEL */}
-      <div className={`side-panel ${open ? "open" : ""}`}>
-        <button className="close-btn" onClick={() => setOpen(false)}>✕</button>
-
-        <h2>CONTACT US</h2><br/>
-
-        <div className="contact-block">
-          <h4> Call Us +1 (877) 482-2430</h4>
-          <p>Monday - Saturday from 10 AM to 10 PM (EST).</p>
-          <p>Sunday from 10 AM to 9 PM (EST).</p>
-        </div>
-
-        <div className="contact-block">
-          <h4> LIVE CHAT</h4>
-          <p>Monday - Saturday from 10 AM to 10 PM (EST).</p>
-          <p>Sunday from 10 AM to 9 PM (EST).</p>
-        </div>
-
-        <div className="contact-block">
-          <h4> Message Us</h4>
-          <p>Monday - Saturday from 10 AM to 10 PM (EST).</p>
-          <p>Sunday from 10 AM to 9 PM (EST).</p>
-        </div>
-
-        <p className="footer-text">Do you need further assistance?</p>
-        <a href="#" className="contact-link">Get in Contact with Us</a>
-      </div>
-    </>
+    </div>
   );
 }

@@ -195,15 +195,44 @@ function Men() {
 
           <div className="product-card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaGpyuOx-JuT-G_7zYd9OIFJe8-6pnJk84YCp8MKudAVC1Q-Ut" alt="Gucci Half Horsebit crossbody bag" />
-            <p className="product-title"></p>Gucci Half Horsebit crossbody bag
+            <p className="product-title">Gucci Half Horsebit crossbody bag</p>
             <p className="product-price">$3,500</p>
           </div>
-
-
-
-
         </div>
       </div>
+
+      
+
+      <footer className="gucci-footer">
+        {/* SIGNUP SECTION */}
+        <div className="footer-signup">
+          <h4>SIGN UP FOR GUCCI UPDATES</h4>
+          <p>
+            Get exclusive updates on the collection's launch, personalized
+            communication and the House's latest news.
+          </p>
+          <br />
+          <br />
+          <a href="#" className="subscribe-link">
+            + SIGN UP
+          </a>
+        </div>
+
+        {/* FOOTER LINKS / LOGOS */}
+        <div className="footer-logos">
+          <p>GUCCI OSTERIA</p>
+          <p>PALAZZO</p>
+        </div>
+
+        {/* COPYRIGHT */}
+        <p className="footer-copy">
+          © 2016 - 2025 Guccio Gucci S.p.A. - All rights reserved. SIAE LICENCE
+          # 2294/I/1936 and 5647/I/1936
+        </p>
+
+        {/* BIG GUCCI TEXT */}
+        <h1 className="footer-brand">GUCCI</h1>
+      </footer>
     </>
   );
 }

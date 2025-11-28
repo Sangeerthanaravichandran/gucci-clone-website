@@ -209,12 +209,41 @@ function Child() {
             <p className="product-title-child">Gucci Half Horsebit crossbody bag</p>
             <p className="product-price-child">$3,500</p>
           </div>
-
-
-
-
-        </div>
+           </div>
       </div>
+
+     
+
+      <footer className="gucci-footer">
+        {/* SIGNUP SECTION */}
+        <div className="footer-signup">
+          <h4>SIGN UP FOR GUCCI UPDATES</h4>
+          <p>
+            Get exclusive updates on the collection's launch, personalized
+            communication and the House's latest news.
+          </p>
+          <br />
+          <br />
+          <a href="#" className="subscribe-link">
+            + SIGN UP
+          </a>
+        </div>
+
+        {/* FOOTER LINKS / LOGOS */}
+        <div className="footer-logos">
+          <p>GUCCI OSTERIA</p>
+          <p>PALAZZO</p>
+        </div>
+
+        {/* COPYRIGHT */}
+        <p className="footer-copy">
+          © 2016 - 2025 Guccio Gucci S.p.A. - All rights reserved. SIAE LICENCE
+          # 2294/I/1936 and 5647/I/1936
+        </p>
+
+        {/* BIG GUCCI TEXT */}
+        <h1 className="footer-brand">GUCCI</h1>
+      </footer>
     </>
   );
 }

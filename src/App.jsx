@@ -7,6 +7,8 @@ import Landingpage from "./Components/Landingpage";
 import Men from "./Components/Men";
 import Women from "./Components/Women";
 import Child from "./Components/Child";
+import Contact from "./Components/Contact";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,8 +21,10 @@ function App() {
           <Route path="/Men" element={<Men />}></Route>
           <Route path="/Women" element={<Women />}></Route>
           <Route path="/Child" element={<Child />}></Route>
+          <Route path="/contact" element={<Contact />} /> 
         </Routes>
       </BrowserRouter>
+     
     </>
   );
 }

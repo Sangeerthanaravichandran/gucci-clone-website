@@ -295,3 +295,157 @@ button {
   color: black; */
   padding: 10px 22px;
 }
+
+
+/* gucci service */
+
+.services-section {
+  width: 100%;
+  padding: 100px 0;
+  background: white;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.services-title {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+}
+
+.services-grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.service-card {
+  position: relative;
+  text-align: center;
+}
+
+.service-video {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Pause Button */
+.pause-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.pause-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.service-name {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 550;
+}
+
+.service-desc {
+  font-size: 15px;
+  width: 85%;
+  margin: auto;
+  line-height: 1.5;
+  color: #444;
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-video {
+    height: 320px;
+  }
+}
+
+
+/* 
+footer */
+
+/* ================= FOOTER ================= */
+
+.gucci-footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.footer-signup h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-signup p {
+  font-size: 32px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.4;
+  font-weight: 200;
+}
+
+.subscribe-link {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.subscribe-link:hover {
+  opacity: 0.7;
+}
+
+
+/* Footer logos */
+.footer-logos {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.footer-logos img {
+  height: 40px;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  margin-top: 40px;
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* BIG GUCCI */
+.footer-brand {
+  font-size: 280px;
+  font-weight: 400;
+  margin-top: 120px;
+  letter-spacing: 15px;
+}

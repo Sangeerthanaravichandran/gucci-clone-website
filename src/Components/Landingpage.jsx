@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Guccihome.css";
+import "./Contact.css";
 
 // ICONS
 import {
@@ -13,8 +14,14 @@ import {
 
 import gucciVisitStore1 from "../assets/gucci visit store 1.mp4";
 
+import ContactPanel from "../components/Contact";
+
 
 export default function Landingpage() {
+
+  //contact
+  const [contactOpen, setContactOpen] = useState(false);
+
   // VIDEO refs
   const video1 = useRef(null);
   const video2 = useRef(null);
@@ -42,9 +49,9 @@ export default function Landingpage() {
         {/* LEFT */}
         <div className="nav-left">
           <span className="plus-icon">+</span>
-          <Link to="/Contact" className="contact-link">
+          <button className="contact-link" onClick={() => setContactOpen(true)}>
             Contact Us
-          </Link>
+          </button>
         </div>
 
         {/* CENTER */}
@@ -80,7 +87,6 @@ export default function Landingpage() {
           <Link to="/Login" className="nav-icon-link">
             <FaUser />
           </Link>
-
         </div>
       </nav>
 
@@ -237,6 +243,8 @@ export default function Landingpage() {
           </div>
         </div>
       </section>
+
+      <ContactPanel open={contactOpen} setOpen={setContactOpen} />
 
       {/*FOOTER*/}
 

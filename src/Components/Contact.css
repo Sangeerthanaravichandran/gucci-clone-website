@@ -1,47 +1,124 @@
+/* OVERLAY BACKDROP*/
 .contact-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: flex-end;
+  animation: fadeIn 0.3s ease forwards;
   z-index: 9999;
 }
 
-.contact-panel {
-  width: 35%;
-  height: 100%;
-  background: white;
-  padding: 40px;
-  overflow-y: auto;
-  animation: slideIn 0.3s ease forwards;
-  position: relative;
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
+
+.contact-panel {
+  width: 380px;
+  max-width: 90%;
+  height: 100%;
+  background: white;
+  padding: 32px;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.35s ease forwards;
+  transform: translateX(100%);
+  
+}
+
+/* Slide animation */
 @keyframes slideIn {
   from { transform: translateX(100%); }
   to { transform: translateX(0); }
 }
 
+
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 24px;
-  background: black;
-  color: white;
+  top: 18px;
+  right: 18px;
+  font-size: 22px;
+  color: #333;
+  background: none;
   border: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.item { margin: 25px 0; }
-.item h4 { text-decoration: underline; cursor: pointer; }
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+
+ 
+.contact-panel h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  
+}
+
+
+.item {
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+}
+
+.item h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-item {
+  list-style: none; 
+}
 
 .contact-link {
-  text-decoration: underline;
   font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
+  letter-spacing: 0.5px;
+  padding-left: 0;
 }
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+
+.close-contact-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+

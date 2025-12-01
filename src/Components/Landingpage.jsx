@@ -78,11 +78,7 @@ export default function Landingpage() {
             <FaBagShopping />
           </Link>
 
-          {/* LOGIN */}
-
-          {/* <a href="./Login" className="nav-icon-link">
-            <FaUser />
-          </a> */}
+          
 
           <Link to="/Login" className="nav-icon-link">
             <FaUser />

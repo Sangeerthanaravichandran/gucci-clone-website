@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 
+
 // ICONS (FontAwesome 6)
 import { FaPhone, FaComments, FaEnvelope } from "react-icons/fa6";
 

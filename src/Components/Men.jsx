@@ -2,18 +2,25 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./Guccihome.css";
+import "./Contact.css";
 
-// ICONS (FontAwesome 6)
+// ICONS
 import { FaMagnifyingGlass, FaUser, FaBagShopping } from "react-icons/fa6";
 
+// CONTACT PANEL
+import ContactPanel from "../components/Contact";
+
 function Men() {
-  // SEARCH STATE
+  // SEARCH
   const [search, setSearch] = useState("");
 
-  // SORT STATE
+  // SORT
   const [sortOption, setSortOption] = useState("recommended");
 
-  // ALL PRODUCTS
+  // CONTACT PANEL STATE
+  const [contactOpen, setContactOpen] = useState(false);
+
+  // PRODUCTS
   const products = [
     {
       img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1762968611/795347_XKD74_4071_001_100_0000_Light-knit-wool-sweater-with-intarsia.jpg",
@@ -52,7 +59,7 @@ function Men() {
     },
     {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsRoA5MtgLx28vNTxb_DVDgXNvBfjf36Yf9ZOWcoABHB5rdzJn",
-      title: "Single-brest cotton jersey jacket",
+      title: "Single-breasted cotton jersey jacket",
       price: "$3,850",
     },
     {
@@ -60,93 +67,46 @@ function Men() {
       title: "Striped cotton poplin shirt",
       price: "$1,250",
     },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHhslzzI0NDRPnxd9tl6db1RdGB_sm9lOD_rlha-ciq1S7RY73",
-      title: "Technical panama sportswear pant",
-      price: "$1,150",
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIHgdR64BaVaqjk0ErvTCzQNJuPdnDjBiHcJMPKKV0IxlLIWoV",
-      title: "Reversible GG nylon zip jacket",
-      price: "$3,300",
-    },
-    {
-      img: "https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1758644120/850222_AAFOM_1053_001_100_0000_Light.jpg",
-      title: "GG Emblem large briefcase",
-      price: "$2,870",
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0LfanS9WTFxrPI0SaYBYsvgtKtq-AKWeJAYeEbh_oRgqGZ00_",
-      title: "Cotton jersey sweatshirt with print",
-      price: "$1,450",
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoH_l4q4oJbvVwaWHt8RAW3ez5UP-rqB1V7LHaI2PAPkubE_ol",
-      title: "Foldable oval-shaped sunglasses",
-      price: "$1,625",
-    },
-    {
-      img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSTEc3KHESOfjGHGJz99Rh_AOvIFTazDSOVMePRoyq6ldk3_Frh",
-      title: "GG canvas shirt",
-      price: "$1,400",
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY12EiutQ2I-MSEtCCZDfwy9jByLwmqNdeIZpyB7vJnZTO0w2E",
-      title: "Ring",
-      price: "$430",
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa1T_sBJ-nO7mijRPdd8tJYOGxHP67m65uoDhtuVHOjRY3wApM",
-      title: "GG canvas padded jacket",
-      price: "$6,100",
-    },
-    {
-      img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRNE-Tls94kCGFzZdqEQT7FfvjU-ZmUgEjTz4CWqoQ91DSo8FcO",
-      title: "Leather baseball hat with Double G",
-      price: "$875",
-    },
-    {
-      img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSVWYxtN3RPFFWMcYduNMAVJ89x7MVjoCj9FXtwcC7hAuTSQJbU",
-      title: "Gucci Interlocking pendant necklace",
-      price: "$560",
-    },
-    {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaGpyuOx-JuT-G_7zYd9OIFJe8-6pnJk84YCp8MKudAVC1Q-Ut",
-      title: "Gucci Half Horsebit crossbody bag",
-      price: "$3,500",
-    },
   ];
 
-  // FILTER PRODUCTS BASED ON SEARCH
+  // FILTER
   const filteredProducts = products.filter((p) =>
     p.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  // SORT PRODUCTS BASED ON SORT OPTION (Recommended)
+  // SORT
   const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (sortOption === "price-low") {
-      return parseFloat(a.price.replace(/[$,]/g, "")) - parseFloat(b.price.replace(/[$,]/g, ""));
-    } else if (sortOption === "price-high") {
-      return parseFloat(b.price.replace(/[$,]/g, "")) - parseFloat(a.price.replace(/[$,]/g, ""));
-    } else if (sortOption === "title-asc") {
-      return a.title.localeCompare(b.title);
-    } else if (sortOption === "title-desc") {
-      return b.title.localeCompare(a.title);
-    } else {
-      return 0; 
+    const priceA = parseFloat(a.price.replace(/[$,]/g, ""));
+    const priceB = parseFloat(b.price.replace(/[$,]/g, ""));
+
+    switch (sortOption) {
+      case "price-low":
+        return priceA - priceB;
+      case "price-high":
+        return priceB - priceA;
+      case "title-asc":
+        return a.title.localeCompare(b.title);
+      case "title-desc":
+        return b.title.localeCompare(a.title);
+      default:
+        return 0;
     }
   });
 
   return (
     <>
-
       {/* NAVBAR */}
       <nav className="gucci-navbar">
         <div className="nav-left">
           <span className="plus-icon">+</span>
-          <Link to="/Contact" className="contact-link">
+
+          {/* CONTACT BUTTON */}
+          <button
+            className="contact-link"
+            onClick={() => setContactOpen(true)}
+          >
             Contact Us
-          </Link>
+          </button>
         </div>
 
         <div className="nav-center">
@@ -160,7 +120,6 @@ function Men() {
           <Link to="/Women">Women</Link>
           <Link to="/Child">Children</Link>
 
-          {/* SEARCH BOX */}
           <div className="search-box">
             <FaMagnifyingGlass className="search-icon" />
             <input
@@ -175,11 +134,18 @@ function Men() {
           <Link to="/cart" className="nav-icon-link">
             <FaBagShopping />
           </Link>
+
           <Link to="/Login" className="nav-icon-link">
             <FaUser />
           </Link>
         </div>
       </nav>
+
+      {/* CONTACT PANEL */}
+      <ContactPanel
+        open={contactOpen}
+        onClose={() => setContactOpen(false)}
+      />
 
       {/* HERO SECTION */}
       <div className="hero-container">
@@ -194,61 +160,60 @@ function Men() {
         </div>
       </div>
 
-      
-      {/* PRODUCT SECTION */}
+      {/* PRODUCTS */}
+      <div className="product-section">
+        {/* SORT BAR */}
+        <div className="product-controls">
+          <div className="sort-wrapper">
+            <label htmlFor="sort" className="sort-label">
+              Sort By:
+            </label>
 
-<div className="product-section">
-  <div className="product-controls">
-    <div className="sort-wrapper">
-      <label htmlFor="sort" className="sort-label">
-        Sort By:
-      </label>
-      <select
-        id="sort"
-        value={sortOption}
-        onChange={(e) => setSortOption(e.target.value)}
-        className="sort-dropdown"
-      >
-        <option value="recommended">Recommended</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="title-asc">Title: A-Z</option>
-        <option value="title-desc">Title: Z-A</option>
-      </select>
-    </div>
+            <select
+              id="sort"
+              className="sort-dropdown"
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+            >
+              <option value="recommended">Recommended</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="title-asc">Title: A-Z</option>
+              <option value="title-desc">Title: Z-A</option>
+            </select>
+          </div>
 
-    <div className="filters-wrapper">
-      <p><strong>Filters</strong></p>
-    </div>
-  </div>
-
-  <div className="product-grid">
-    {sortedProducts.length === 0 ? (
-      <h3 style={{ width: "100%", textAlign: "center", color: "gray" }}>
-        No Products Found
-      </h3>
-    ) : (
-      sortedProducts.map((item, index) => (
-        <div className="product-card" key={index}>
-          <img src={item.img} alt={item.title} />
-          <p className="product-title">{item.title}</p>
-          <p className="product-price">{item.price}</p>
+          <div className="filters-wrapper">
+            <p>
+              <strong>Filters</strong>
+            </p>
+          </div>
         </div>
-      ))
-    )}
-  </div>
-</div>
 
+        {/* GRID */}
+        <div className="product-grid">
+          {sortedProducts.length === 0 ? (
+            <h3 className="no-products">No Products Found</h3>
+          ) : (
+            sortedProducts.map((item, index) => (
+              <div className="product-card" key={index}>
+                <img src={item.img} alt={item.title} />
+                <p className="product-title">{item.title}</p>
+                <p className="product-price">{item.price}</p>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
 
       {/* FOOTER */}
-      
       <footer className="gucci-footer">
         <div className="footer-signup">
           <h4>SIGN UP FOR GUCCI UPDATES</h4>
           <p>
-            Get exclusive updates on the collection's launch, personalized communication and the House's latest news.
+            Get exclusive updates on the collection's launch, personalized communication and the latest news.
           </p>
-          <br /><br />
+
           <a href="#" className="subscribe-link">
             + SIGN UP
           </a>
@@ -270,3 +235,4 @@ function Men() {
 }
 
 export default Men;
+

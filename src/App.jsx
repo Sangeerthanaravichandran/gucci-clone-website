@@ -10,8 +10,6 @@ import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import ProductDetails from "./Components/productDetails";
 
-import ProductDetails from "./Components/ProductDetails";
-
 function App() {
   return (
     <BrowserRouter>

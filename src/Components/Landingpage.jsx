@@ -14,7 +14,7 @@ import {
 
 import gucciVisitStore1 from "../assets/gucci visit store 1.mp4";
 
-import ContactPanel from "../components/Contact";
+import ContactPanel from "../Components/Contact";
 
 import Login from "../Components/Login";
 

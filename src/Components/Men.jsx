@@ -11,7 +11,7 @@ import products from "./product";
 import { FaMagnifyingGlass, FaUser, FaBagShopping } from "react-icons/fa6";
 
 // CONTACT PANEL
-import ContactPanel from "../components/Contact";
+import ContactPanel from "../Components/Contact";
 
 function Men() {
   // SEARCH

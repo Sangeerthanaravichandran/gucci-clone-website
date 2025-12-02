@@ -1,0 +1,45 @@
+.detail-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.detail-left {
+  width: 60%;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.thumb-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.active-thumb {
+  border: 2px solid black;
+}
+
+.detail-right {
+  width: 40%;
+}
+
+.bag-btn {
+  background: black;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}

@@ -2,14 +2,16 @@ body {
   font-family: 'Futura', Helvetica, Arial, sans-serif;
 }
 
+/* Main container */
 .login-container {
   width: 100%;
   max-width: 500px;
-  margin: 60px auto;
+  margin: 70px auto;
   text-align: center;
   padding: 20px;
 }
 
+/* Page title */
 .login-title {
   font-size: 36px;
   letter-spacing: 2px;
@@ -17,7 +19,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* SOCIAL BUTTONS */
+/* Social Buttons */
 .social-btn {
   width: 100%;
   height: 55px;
@@ -33,19 +35,14 @@ body {
   cursor: pointer;
 }
 
-.apple-btn span,
-.google-btn span {
-  font-size: 14px;
-}
-
-/* OR divider */
+/* OR Divider */
 .or-divider {
   margin: 40px 0;
   font-size: 14px;
   letter-spacing: 2px;
 }
 
-/* Email section */
+/* Email title & subtitle */
 .email-title {
   font-size: 22px;
   letter-spacing: 2px;
@@ -59,24 +56,37 @@ body {
   margin-bottom: 30px;
 }
 
+/* Email input */
 .email-input {
   width: 100%;
   height: 50px;
   border: 1px solid black;
   padding: 0 15px;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
-/* Continue button */
+/* Error message */
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* Continue Button */
 .continue-btn {
   width: 100%;
   height: 55px;
-  background: #8f8f8f;
+  background: #000000;
   color: white;
   border: none;
   font-size: 15px;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.continue-btn:hover{
+  background: #2d2c2c;
 }
 
 /* Join My Gucci */
@@ -85,3 +95,25 @@ body {
   font-size: 22px;
   letter-spacing: 2px;
 }
+
+
+/* JOIN MY GUCCI link */
+.join-title {
+  margin-top: 50px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* Hover underline like Gucci */
+.join-title:hover {
+  border-bottom: 1px solid black;
+  letter-spacing: 3px;
+}
+

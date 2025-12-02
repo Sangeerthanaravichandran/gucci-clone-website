@@ -28,7 +28,7 @@ export default function Login() {
 
       <input type="email" placeholder="Email*" className="email-input" />
 
-      <button className="continue-btn" disabled>
+      <button className="continue-btn" >
         CONTINUE
       </button>
 

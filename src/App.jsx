@@ -8,6 +8,8 @@ import Men from "./Components/Men";
 import Women from "./Components/Women";
 import Child from "./Components/Child";
 import Contact from "./Components/Contact";
+import Login from "./Components/Login";
+import ProductDetails from "./Components/productDetails";
 
 
 function App() {
@@ -21,7 +23,9 @@ function App() {
           <Route path="/Men" element={<Men />}></Route>
           <Route path="/Women" element={<Women />}></Route>
           <Route path="/Child" element={<Child />}></Route>
-          <Route path="/contact" element={<Contact />} /> 
+          <Route path="/Contact" element={<Contact />} /> 
+          <Route path="/Login" element={< Login/>}/>
+          <Route path="/ProductDetails" element={<ProductDetails/>}/>
         </Routes>
       </BrowserRouter>
      

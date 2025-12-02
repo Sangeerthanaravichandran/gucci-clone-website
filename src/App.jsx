@@ -10,6 +10,7 @@ import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import ProductDetails from "./Components/ProductDetails";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,8 @@ function App() {
         <Route path="/child" element={<Child />} />
          <Route path="/Login" element={< Login/>}/>
       
+        <Route path="/Login" element={< Login/>}/>
+
         {/* Product Detail Page FIXED */}
         <Route path="/product/:id" element={<ProductDetails />} />
 

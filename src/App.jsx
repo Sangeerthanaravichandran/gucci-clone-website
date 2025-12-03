@@ -9,7 +9,9 @@ import Child from "./Components/Child";
 import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import ProductDetails from "./Components/ProductDetails";
+import ProductDetailsWomen from "./Components/ProductDetailsWomen";
 
+import Cart from "./Components/Cart";
 
 function App() {
   return (
@@ -21,12 +23,16 @@ function App() {
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/child" element={<Child />} />
-         <Route path="/Login" element={< Login/>}/>
-      
-        <Route path="/Login" element={< Login/>}/>
+        <Route path="/Login" element={<Login />} />
+
+        <Route path="/Login" element={<Login />} />
+
+        <Route path="/cart" element={<Cart />} />
 
         {/* Product Detail Page FIXED */}
         <Route path="/product/:id" element={<ProductDetails />} />
+
+        <Route path="/women/product/:id" element={<ProductDetailsWomen />} />
 
         <Route path="/contact" element={<Contact />} />
       </Routes>

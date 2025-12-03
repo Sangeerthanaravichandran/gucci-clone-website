@@ -1,0 +1,123 @@
+const productwomen = [
+  {
+    id: 1,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Gucci Giglio Large Tote Bag",
+    price: "$2,850",
+  },
+  {
+    id: 2,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1757518256/861000_I3330_8023_001_100_0000_Light-navigator-sunglasses.jpg",
+    title: "Navigator sunglasses",
+    price: "$690",
+  },
+  {
+    id: 3,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1761237942/854588_ZAM5B_9853_001_100_0000_Light-diagonal-gg-silk-jacquard-dress.jpg",
+    title: "Diagonal GG silk jacquard dress",
+    price: "$5,600",
+  },
+  {
+    id: 4,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1757435467/858536_I4600_0912_001_100_0000_Light-pig-shaped-earrings.jpg",
+    title: "Pig-shaped earrings",
+    price: "$1,500",
+  },
+  {
+    id: 5,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Gucci Giglio large tote bag",
+    price: "$3,680",
+  },
+  {
+    id: 6,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Printed silk twill shirt",
+    price: "$3,400",
+  },
+  {
+    id: 7,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1756191609/856997_F1400_1601_001_090_0000_Light-womens-slide-sandal.jpg",
+    title: "Women's slide sandal",
+    price: "$1,030",
+  },
+  {
+    id: 8,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Rectangular frame sunglasses",
+    price: "$665",
+  },
+  {
+    id: 9,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Double-breasted light wool jacket",
+    price: "$3,700",
+  },
+  {
+    id: 10,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Horsebit silk jacquard T-shirt",
+    price: "$1,980",
+  },
+  {
+    id: 11,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Horsebit silk jacquard pant",
+    price: "$2,300",
+  },
+  {
+    id: 12,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Women's GG crystal Screener sneaker",
+    price: "$1,370",
+  },
+  {
+    id: 13,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Women's slingback with crystal logo",
+    price: "$1,300",
+  },
+  {
+    id: 14,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Gucci Half Horsebit medium shoulder bag",
+    price: "$2,900",
+  },
+  {
+    id: 15,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1760633122/846682_ZARWY_1000_001_100_0000_Light-wool-tweed-lame-top.jpg",
+    title: "Wool tweed lamé top",
+    price: "$3,700",
+  },
+  {
+    id: 16,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Fine wool dress with GG crystals",
+    price: "$3,600",
+  },
+  {
+    id: 17,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Embroidered wool tweed lamé shorts",
+    price: "$2,900",
+  },
+  {
+    id: 18,
+    img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR0l1vH8TODiUPyWOAg7oqG3Cz9FurAlfaMg2Wahfi27iYUWO92",
+    title: "Reversible GG fine wool jacquard cardigan",
+    price: "$3,200",
+  },
+  {
+    id: 19,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "GG boutonné wool tweed skirt",
+    price: "$1,250",
+  },
+  {
+    id: 20,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1747324804/853971_FAFFP_2547_001_100_0000_Light-gucci-giglio-large-tote-bag.jpg",
+    title: "Flared bleached cotton denim pants",
+    price: "$1,500",
+  },
+];
+export default productwomen;

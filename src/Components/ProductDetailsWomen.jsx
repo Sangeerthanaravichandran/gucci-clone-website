@@ -1,11 +1,10 @@
-// ProductDetails.jsx
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import products from "./product";
-import { addToCartStorage } from "./cartStorage"; // <-- ADD THIS
-import "./ProductDetails.css";
+import products from "./productwomen"; // ✅ FIXED
+import "./ProductDetailsWomen.css";
+import { addToCartStorage } from "./cartStorage";
 
-export default function ProductDetails() {
+export default function ProductDetailsWomen() {
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
 
@@ -15,10 +14,10 @@ export default function ProductDetails() {
 
   const images = Array.isArray(product.img) ? product.img : [product.img];
 
-  const handleAddToBag = () => {
-    addToCartStorage(product);
-    alert("Added to Bag!");
-  };
+   const handleAddToBag = () => {
+      addToCartStorage(product);
+      alert("Added to Bag!");
+    };
 
   return (
     <div className="detail-wrapper">
@@ -40,7 +39,7 @@ export default function ProductDetails() {
 
       <div className="detail-right">
         <h1>{product.title}</h1>
-        <h2>₹ {product.price}</h2>
+        <h2>{product.price}</h2>
         <p>{product.Description}</p>
 
         <button className="bag-btn" onClick={handleAddToBag}>

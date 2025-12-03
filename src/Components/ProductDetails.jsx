@@ -14,6 +14,11 @@ export default function ProductDetails() {
     return <h2>Product Not Found</h2>;
   }
 
+  const addToCart = ()=>
+  {
+        alert ("add to cart successfully");
+  }
+
   // Make sure images is always an array
   const images = Array.isArray(product.img) ? product.img : [product.img];
 
@@ -43,8 +48,12 @@ export default function ProductDetails() {
         <h1>{product.title}</h1>
         <h2>{product.price}</h2>
 
-        <button className="bag-btn">ADD TO BAG</button>
+       <button className="bag-btn" onClick={addToCart}>
+  ADD TO BAG
+</button>
+
       </div>
     </div>
+    
   );
 }

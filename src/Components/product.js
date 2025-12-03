@@ -1,68 +1,101 @@
 const products = [
-    {
-      id: 1,
-      img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1762968611/795347_XKD74_4071_001_100_0000_Light-knit-wool-sweater-with-intarsia.jpg",
-      title: "Knit wool sweater with intarsia",
-      price: "$1,550",
-    },
-    {
-         id: 2,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQPrJ9je7rZ4VMYd6XmyQE0vQHTSuFTX2IYHeaUl3OgETnLO6",
-      title: "GG large backpack",
-      price: "$3,200",
-    },
-    { 
-         id: 3,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOLTu5BDCxYkV_l27MKL7tR2KL4MINRbz6AsPMM7NjbeIy3ci",
-      title: "Slim fit cotton denim pant",
-      price: "$980",
-    },
-    { id: 4,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK3Lw5_jKz0YzmCmid0T9o3kgrCfOGraxvKM5DtW5fher1xKv",
-      title: "Men's Gucci Re-Web sneaker",
-      price: "$1,230",
-    },
-    { id: 5,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQz6CeD-Z3sYEa497JmM33DZAaAWd5Q-m8tZSvv14lN7K13WbZ",
-      title: "Men's boot with buckle",
-      price: "$1,456",
-    },
-    { id: 6,
-      img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnMXnS8itn6w6D7RxjMApeEFfjH29Wgvz7lzgTO3ZRU7l4OgHB",
-      title: "Cotton twill pants",
-      price: "$1,350",
-    },
-    { id: 7,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51S636Bb45ueRSG3yFCOm9BonrPQcpRNTloXyDW9jNVWgTgmI",
-      title: "Reversible GG Marmont belt",
-      price: "$570",
-    },
-    { id: 8,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsRoA5MtgLx28vNTxb_DVDgXNvBfjf36Yf9ZOWcoABHB5rdzJn",
-      title: "Single-breasted cotton jersey jacket",
-      price: "$3,850",
-    },
-    { id: 9,
-      img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPmg-mpBAJOHNn9apqZaM-yrAHiiUCnbvDyKHpFcD9cKPOP8hF",
-      title: "Striped cotton poplin shirt",
-      price: "$1,250",
-    },
+  {
+    id: 1,
+    img: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1762968611/795347_XKD74_4071_001_100_0000_Light-knit-wool-sweater-with-intarsia.jpg",
+    title: "Knit wool sweater with intarsia",
+    price: "$1,550",
+    Description:
+      "Versatile pieces made of cotton-based fabrics are embellished with an archival-inspired logo which adds a touch of flair to complete the wardrobe. This sweater appears in dark blue knit wool and features a Gucci script intarsia.",
+  },
+  {
+    id: 2,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQPrJ9je7rZ4VMYd6XmyQE0vQHTSuFTX2IYHeaUl3OgETnLO6",
+    title: "GG large backpack",
+    price: "$3,200",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this large backpack features a Double G detail.",
+  },
+  {
+    id: 3,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOLTu5BDCxYkV_l27MKL7tR2KL4MINRbz6AsPMM7NjbeIy3ci",
+    title: "Slim fit cotton denim pant",
+    price: "$980",
+    Description:
+      "Refined washes, precise construction, and design coherence elevate denim pieces, bridging the House's legacy and what's next. This pair of slim fit cotton denim pants is defined by a naplak label on the back, adding a distinctive touch.",
+  },
+  {
+    id: 4,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK3Lw5_jKz0YzmCmid0T9o3kgrCfOGraxvKM5DtW5fher1xKv",
+    title: "Men's Gucci Re-Web sneaker",
+    price: "$1,230",
+    Description:
+      "Vibrant camouflage in distinctive color combinations reinterprets the Re-Web's contemporary silhouette, highlighting Gucci’s emblematic details. This pair features a decorative tag with the name of the collection, and the signature green and red Web trim completes the style.",
+  },
+  {
+    id: 5,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQz6CeD-Z3sYEa497JmM33DZAaAWd5Q-m8tZSvv14lN7K13WbZ",
+    title: "Men's boot with buckle",
+    price: "$1,456",
+    Description:
+      "The marbled motif is a nuanced exploration of the modern man's wardrobe through a hypnotic pattern. Crafted from multicolor cotton poplin, this bowling shirt features an allover marbled print combined with the GG monogram.",
+  },
+  {
+    id: 6,
+    img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnMXnS8itn6w6D7RxjMApeEFfjH29Wgvz7lzgTO3ZRU7l4OgHB",
+    title: "Cotton twill pants",
+    price: "$1,350",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
+  {
+    id: 7,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51S636Bb45ueRSG3yFCOm9BonrPQcpRNTloXyDW9jNVWgTgmI",
+    title: "Reversible GG Marmont belt",
+    price: "$570",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
+  {
+    id: 8,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsRoA5MtgLx28vNTxb_DVDgXNvBfjf36Yf9ZOWcoABHB5rdzJn",
+    title: "Single-breasted cotton jersey jacket",
+    price: "$3,850",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
+  {
+    id: 9,
+    img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPmg-mpBAJOHNn9apqZaM-yrAHiiUCnbvDyKHpFcD9cKPOP8hF",
+    title: "Striped cotton poplin shirt",
+    price: "$1,250",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
 
-    { id: 10,
-      img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSJDO9isfuaEHOsyQOHus51tpB01MhFn5EXXy2SOQ-HbhvMX9sX",
-      title: "GG canvas padded jacket",
-      price: "$6,100",
-    },
-    { id: 11,
-      img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8unxO2hgLyHrNSpX4nK9sJ47NA9dFRJOTQVfrt4HuehUp92v_",
-      title: "Tartan cotton jacquard shirt",
-      price: "$1,550",
-    },
+  {
+    id: 10,
+    img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSJDO9isfuaEHOsyQOHus51tpB01MhFn5EXXy2SOQ-HbhvMX9sX",
+    title: "GG canvas padded jacket",
+    price: "$6,100",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
+  {
+    id: 11,
+    img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8unxO2hgLyHrNSpX4nK9sJ47NA9dFRJOTQVfrt4HuehUp92v_",
+    title: "Tartan cotton jacquard shirt",
+    price: "$1,550",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
 
-    { id: 12,
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGZY2dgywBghz6S38h8ATJSm0jKzsypKdlqr3cH64fSPtLFi7m",
-      title: "Men's Screener sneaker",
-      price: "$1,060",
-    },
-  ];
+  {
+    id: 12,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGZY2dgywBghz6S38h8ATJSm0jKzsypKdlqr3cH64fSPtLFi7m",
+    title: "Men's Screener sneaker",
+    price: "$1,060",
+    Description:
+      "Vibrant camouflage in distinctive colors reinterprets the emblematic GG motif. Crafted from a marbled GG Monogram coated fabric, this small crossbody bag features a Double G detail.",
+  },
+];
 export default products;

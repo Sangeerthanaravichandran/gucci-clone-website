@@ -76,7 +76,7 @@ export default function Landingpage() {
           </div>
 
           {/* CART */}
-          <Link to="/cart" className="nav-icon-link">
+          <Link to="/Cart" className="nav-icon-link">
             <FaBagShopping />
           </Link>
 
